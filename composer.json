@@ -1,0 +1,33 @@
+{
+    "name": "pandawan-technology/neo4j-bundle",
+    "description": "Symfony integration for the graphaware/neo4j-php-client",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": [
+        "graph",
+        "database",
+        "neo4j",
+        "Symfony"
+    ],
+    "homepage": "https://github.com/PandawanTechnology/Neo4jBundle",
+    "authors": [
+        {
+            "name": "Xavier Coureau",
+            "email": "xavier@pandawan-technology.com"
+        }
+    ],
+    "require": {
+        "graphaware/neo4j-php-client": "^4.1.1",
+        "symfony/framework-bundle": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "PandawanTechnology\\Neo4jBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PandawanTechnology\\Neo4jBundle\\Tests\\": "tests/"
+        }
+    }
+}
