@@ -18,7 +18,7 @@
     ],
     "require": {
         "graphaware/neo4j-php-client": "^4.1.1",
-        "symfony/framework-bundle": "^2.7"
+        "symfony/framework-bundle": "^2.7|^3.0"
     },
     "autoload": {
         "psr-4": {
