@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="pandawan_technology_neo4j.data_collector" class="PandawanTechnology\Neo4jBundle\DataCollector\Neo4jClientDataCollector" public="false">
+            <tag name="data_collector" template="@PandawanTechnologyNeo4j/Collector/db.html.twig" id="pandawan_technology_neo4j" />
+
+            <argument type="service" id="pandawan_technology_neo4j.connection_manager" />
+            <argument>%pandawan_technology_neo4j.connection_names%</argument>
+            <argument type="service" id="pandawan_technology_neo4j.query_logger" />
+        </service>
+
+        <service id="pandawan_technology_neo4j.query_logger" class="PandawanTechnology\Neo4jBundle\Logger\QueryLogger" public="false"/>
+
+        <service id="pandawan_technology_neo4j.subscriber.logger" class="PandawanTechnology\Neo4jBundle\EventSubscriber\LoggerSubscriber">
+            <tag name="kernel.event_subscriber" />
+
+            <argument type="service" id="pandawan_technology_neo4j.query_logger" />
+        </service>
+
+    </services>
+</container>
