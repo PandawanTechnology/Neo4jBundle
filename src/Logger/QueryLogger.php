@@ -60,10 +60,10 @@ class QueryLogger implements \Countable
         }
 
         $this->statements[$idx] += [
+            'end_time' => microtime(true) * 1000,
             'query' => $statementText,
             'parameters' => $statementParams,
             'tag' => $statement->getTag(),
-            'end_time' => microtime(true) * 1000,
             'nb_results' => $statementResult->size()
         ];
     }
@@ -73,7 +73,7 @@ class QueryLogger implements \Countable
      */
     public function count()
     {
-        return count($this->statements);
+        return $this->nbQueries;
     }
 
     /**
