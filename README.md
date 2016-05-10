@@ -1,5 +1,5 @@
 # Neo4jBundle
-Symfony integration for the graphaware/neo4j-php-client
+Symfony integration for the [GraphAware Neo4j PHP Client](https://github.com/graphaware/neo4j-php-client)
 
 ## Configuration
 ```yaml
