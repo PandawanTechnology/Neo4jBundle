@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 class ConnectionCompilerPass implements CompilerPassInterface
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function process(ContainerBuilder $container)
     {

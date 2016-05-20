@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="pandawan_technology_neo4j.form.type.neo4j" class="PandawanTechnology\Neo4jBundle\Form\Type\Neo4jType">
+            <tag name="form.type" />
+
+            <argument type="service" id="pandawan_technology_neo4j.client" />
+        </service>
+
+    </services>
+</container>

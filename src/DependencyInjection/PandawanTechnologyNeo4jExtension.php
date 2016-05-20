@@ -23,8 +23,10 @@ class PandawanTechnologyNeo4jExtension extends Extension
 
         $container->setParameter(static::CONFIGURATION_KEY_NAME, $config['connections']);
 
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('form_type.xml');
+
         if ($container->hasParameter('kernel.debug') && true === $container->getParameter('kernel.debug')) {
-            $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
             $loader->load('debugging_services.xml');
         }
     }
