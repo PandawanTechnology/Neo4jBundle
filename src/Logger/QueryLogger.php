@@ -64,12 +64,12 @@ class QueryLogger implements \Countable
             'query' => $statementText,
             'parameters' => $statementParams,
             'tag' => $statement->getTag(),
-            'nb_results' => $statementResult->size()
+            'nb_results' => $statementResult->size(),
         ];
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function count()
     {
